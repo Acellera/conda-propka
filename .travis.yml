@@ -1,5 +1,5 @@
 git:
- depth: 4
+ depth: 5
 branches:
  only:
   - master
