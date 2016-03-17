@@ -1,5 +1,3 @@
-git:
- depth: 5
 branches:
  only:
   - master
@@ -50,10 +48,12 @@ script:
 after_success:
  - export PATH="$HOME/miniconda/bin:$PATH"
  - echo $PATH
- - anaconda -t $ANACONDA_TOKEN upload  $HOME/miniconda/conda-bld/*-64/propka-[0-9]*.tar.bz2 -u acellera || /usr/bin/true   || /bin/true
+ - anaconda -t $ANACONDA_TOKEN upload  $HOME/miniconda/conda-bld/*-64/propka-[0-9]*.tar.bz2 -u acellera 
+ - anaconda -t $ANACONDA_TOKEN upload  $HOME/miniconda/conda-bld/*-64/propka-[0-9]*.tar.bz2 -u acellera-basic
 # Convert the package from  linux-64 to win-64, as it's source-only
  - conda convert -p win-64  $HOME/miniconda/conda-bld/*-64/propka-[0-9]*.tar.bz2
  - ls -lR
- - anaconda -t $ANACONDA_TOKEN upload win-64/*bz2 -u acellera || /usr/bin/true || /bin/true
+ - anaconda -t $ANACONDA_TOKEN upload win-64/*bz2 -u acellera 
+ - anaconda -t $ANACONDA_TOKEN upload win-64/*bz2 -u acellera-basic 
 
 
