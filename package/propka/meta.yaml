@@ -1,6 +1,6 @@
 package:
   name:  propka
-  version: {{ environ.get('BUILD_VERSION', "0.0.1" ) }}
+  version: {{ environ.get('BUILD_VERSION', "0.0.1" ) }} 
 
 
 build:
