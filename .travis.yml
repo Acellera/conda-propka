@@ -39,6 +39,6 @@ script:
 after_success:
  - export PATH="$HOME/miniconda/bin:$PATH"
  - echo $PATH
- - anaconda -t $ANACONDA_TOKEN upload --force $HOME/miniconda/conda-bld/*/htmd-propka-*.tar.bz2 -u acellera
+ - anaconda -t $ANACONDA_TOKEN upload --force $HOME/miniconda/conda-bld/*/propka-*.tar.bz2 -u acellera
 
 
