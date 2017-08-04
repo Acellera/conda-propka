@@ -31,7 +31,7 @@ install:
  - export BUILD_NUMBER=0
 
 
- - conda build --python $TRAVIS_PYTHON_VERSION package/propka/
+ - conda build --old-build-string --python $TRAVIS_PYTHON_VERSION package/propka/
  - conda install propka --use-local
 
 script:
